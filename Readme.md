@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Павел Воронов](https://up.htmlacademy.ru/htmlcss-individual/1/user/1643425).
-* Наставник: `Неизвестно`.
+* Наставник: `Наталья Зотова`(https://htmlacademy.ru/profile/id1079951).
 
 ---
 
