@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -44,18 +45,20 @@
       <main class="main main-index">
         <section class="hero">
           <h1 class="visually-hidden">Город "Седона"</h1>
-          <img class="hero-logo" src="image/allsvg/welcome.svg" width="458" height="352" alt="Приветственный логотип штата «Джорджия» и города «Седона».">
+          <img class="hero-logo" src="image/svg/welcome.svg" width="458" height="352" alt="Приветственный логотип штата «Джорджия» и города «Седона».">
         </section>
 
         <!--Достопримечательности-->
         <section class="advantages" id="advant">
+          <div class="advantages-background">
             <h2 class="advantages-main-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p  class="advantages-description-city text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
             <ul class="advantages-list">
               <li class="advantages-item advantages-attractions">
                 <div class="advantages-content">
-                  <h3 class="advantages-title">Настоящий городок</h3>
-                  <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                  <h3 class="advantages-title white-text">Настоящий городок</h3>
+                  <p class="advantages-description white-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <figure class="advantages-image">
                   <img class="advantages-photo" src="image/attractions-1.jpg" width="800" height="385" alt="Улица города">
@@ -81,8 +84,8 @@
               </li>
               <li class="advantages-item advantages-attractions advantages-item-revers">
                 <div class="advantages-content">
-                  <h3 class="advantages-title">Там есть мост дьявола</h3>
-                  <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                  <h3 class="advantages-title white-title">Там есть мост дьявола</h3>
+                  <p class="advantages-description white-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                 </div>
                 <figure class="advantages-image">
                   <img class="advantages-photo" src="image/attractions-2.jpg" width="800" height="385"  alt="Мост дьявола">
@@ -114,8 +117,8 @@
           <a class="search-button button" href="#">Поиск гостинницы в Седоне</a>
         </section>
         <section class="subscribe subscribe-home">
-          <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <h2 class="subscribe-title title white-text">Подпишитесь на рассылку</h2>
+          <p class="subscribe-description text white-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Ваш email</label>
             <input class="subscribe-input field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
