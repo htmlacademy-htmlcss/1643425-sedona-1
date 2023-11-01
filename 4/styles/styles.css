@@ -10,124 +10,183 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
+}
+/*Для настройки ширины элементов*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0 40px;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: #000;
-  background: #FFF;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+/*стакан*/
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .button {
+  display: inline-block;
+  padding: 8px 10px;
   text-align: center;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
   color: #FFF;
   background-color: #756157;
   text-decoration: none;
+  border: none; /**/
+  border-radius: 4px;
+
 }
 .button-light {
   background-color: #82B3D3;
-  color:#FFF;
+}
+/*кнопка сброса*/
+.button-transparent {
+  background-color: transparent;
 }
 
+.title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 22px;
+  margin: 0;
+  line-height: 26px;
+  }
+/*инпут*/
+  .field {
+    width: 100%;
+    height: 48px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "PT Sans", sans-serif;
+    color: #000000;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .field::placeholder {
+    color: #000000;
+
+    opacity: 0.6;
+  }
+
 .navigation-link {
-  text-align: center;
-  color: inherit;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-transform: capitalize;
+  color: #000000;
   text-decoration: none;
 }
 
-.main-index {
-  color: #000;
-  background: #FFF;
+.hero {
+  color: #ffffff;
+  background-color: #5c84ab;
   background-image: url("../image/index-background.jpg");
   background-repeat: no-repeat;
-}
-/*вставил ради интереса, вроде получилось. Но возможно div был лишним*/
-.advantages-background {
-  display: flex;
-  width: 1200px;
-  padding: 69px 0px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}
-/*Достопримечательности*/
-.advantages-main-title,
-.title {
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
+  background-size: cover;
 }
 
-.advantages-description-city,
-.text {
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
+.advantages-texts  {
+  padding: 69px 70px;
   text-align: center;
-  }
+}
+/*Достопримечательности*/
+.advantages-main-title {
+  margin-bottom: 20px;
+}
 
 .advantages-list {
   text-align: center;
 }
 
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:not(.advantages-attractions):nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-attractions {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
 .advantages-title {
-  font-family: "PT Sans", sans-serif;
-  font-size: 24px;
-  font-style: normal;
+  margin: 0 0 30px;
   font-weight: 700;
+  font-size: 24px;
   line-height: 28px;
+  color: #000000; /**/
   text-transform: uppercase;
+}
+.advantages-attractions .advantages-title {
+  color: #ffffff;
 }
 
 .advantages-description {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-}
-/*Здесь не уверен как правильно надо было сделать фон*/
-.advantages-content {background-color: #82B3D3;}
+  margin: 0;
+ }
 
-.white-text {
-  color: #FFF;
-}
 /*services*/
+.services-texts {
+  padding: 65px 70px;
+  text-align: center;
+}
+
+.services-title {
+  margin: 20px;
+}
+.services-item {
+  text-align: center;
+}
 .services-subtitle {
-  font-family: "PT Sans", sans-serif;
+  margin: 0 0 30px;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  text-align: center;
+  color: #000000;
+
 }
 
 .services-description {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
+  margin: 0;
+}
+
+.search {
   text-align: center;
 }
 
@@ -135,85 +194,101 @@ body {
   font-size: 20px;
   line-height: 36px;
 }
-/*Вот здесь почему то фон не встает правильно*/
+
+.subscribe {
+  text-align: center; /**/
+}
+
 .subscribe-home {
+  color: #ffffff;
+  background-color: #5c84ab;
   background-image: url("../image/subscribe-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 1200px;
+  background-size: cover;
+}
+
+.subscribe-home .subscribe-title {
+  color: #ffffff;
+}
+
+.subscribe-input {
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-input::placeholder {
+  font-weight: 400;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+
+  border-radius: 0 4px 4px 0;
 }
 /* Texts/Text phone */
 .page-footer-phone {
-  font-family: "PT Sans", sans-serif;
   color: #000;
   text-align: center;
   font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 40px;
-  text-transform: uppercase;
   text-decoration: none;
 }
+
 .catalog {
-  background-image: url("../image/filter-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-color: #82B3D3;
   color:#FFF;
+  background-color: #82B3D3;
+  background-image: url("../image/filter-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.catalog-header-title {
+  margin: 0 0 10px;
+  font-size: 60px;
+  line-height: 78px;
+}
+
 .breadcrumbs-link {
-  font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 21px;
   color:inherit;
   text-decoration: none;
 }
 
-.sorting-title{
-  text-align: left;
+.sorting-select {
+  width: 292px;
+  height: 49px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
+
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .filter-title {
   font-size: 20px;
   font-weight: 700;
-  line-height: 24px; /* 120% */
-  text-transform: capitalize;
+  line-height: 24px;
 }
 
 .control-text {
-  font-size: 18px;
-  font-weight: 400;
   line-height: 23px;
 }
 
-.sorting-select {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px; /* 116.667% */
-}
 .hotel-card-link {
+  color: #000000;
   text-decoration: none;
 }
 
 .hotel-card-title {
-  font-family: "PT Sans", sans-serif;
-  color: #000;
+  margin: 0;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   line-height: 28px;
-  text-decoration: none;
-}
-
-.hotel-card-text {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px; /* 116.667% */
 }
 
 .hotels-favorites-active {
@@ -222,30 +297,34 @@ body {
 
 .hotel-rating {
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .pagination-link {
-  font-family: "PT Sans", sans-serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* 180% */
-  text-transform: uppercase;
+  line-height: 36px;
   background-color:  #82B3D3;
   color: #FFF;
   text-decoration: none;
+  border: 1px solid #82b3d3;
+  border-radius: 4px;
 }
 
 .pagination-link-current {
   color: #000;
   background-color: #F2F2F2;
+  border-color: transparent;
 }
 
 .pagination-link-more {
-  color: #000;
-  background-color: #FFF;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #ffffff;
+  border-color: transparent;
 }
