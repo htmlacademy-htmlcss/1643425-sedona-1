@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <div class="wrapper">
       <header class="page-header">
         <a class="page-header-logo" href="index.html" aria-current="page">
-          <img class="logo" src="image/allsvg/logo.svg" width="150" height="70" alt="Логотип города Седона.">
+          <img class="logo" src="image/svg/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -18,13 +19,13 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#advant">О Седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-user-list navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-user-item">
               <a class="navigation-user-link navigation-user-link-search" href="">
                 <span class="visually-hidden">Поиск</span>
@@ -44,13 +45,15 @@
       <main class="main main-index">
         <section class="hero">
           <h1 class="visually-hidden">Город "Седона"</h1>
-          <img class="hero-logo" src="image/allsvg/welcome.svg" width="458" height="352" alt="Приветственный логотип штата «Джорджия» и города «Седона».">
+          <img class="hero-logo" src="image/svg/welcome.svg" width="458" height="352" alt="Приветственный логотип штата «Джорджия» и города «Седона».">
         </section>
 
         <!--Достопримечательности-->
         <section class="advantages" id="advant">
+          <div class="advantages-texts">
             <h2 class="advantages-main-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p  class="advantages-description-city text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
             <ul class="advantages-list">
               <li class="advantages-item advantages-attractions">
                 <div class="advantages-content">
@@ -81,8 +84,8 @@
               </li>
               <li class="advantages-item advantages-attractions advantages-item-revers">
                 <div class="advantages-content">
-                  <h3 class="advantages-title">Там есть мост дьявола</h3>
-                  <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                  <h3 class="advantages-title white-text">Там есть мост дьявола</h3>
+                  <p class="advantages-description white-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                 </div>
                 <figure class="advantages-image">
                   <img class="advantages-photo" src="image/attractions-2.jpg" width="800" height="385"  alt="Мост дьявола">
@@ -91,8 +94,10 @@
             </ul>
         </section>
         <section class="services">
-          <h2 class="services-title title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="services-description-city text">Опытный персонал и качественное обслуживание!</p>
+          <div class="services-texts">
+            <h2 class="services-title title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+            <p class="services-description-city text">Опытный персонал и качественное обслуживание!</p>
+          </div>
           <ul class="services-list">
             <li class="services-item services-item-house">
               <h3 class="services-subtitle">Жильё</h3>
