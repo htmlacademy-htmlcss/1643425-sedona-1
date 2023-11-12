@@ -83,6 +83,17 @@ body {
   text-transform: uppercase;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .text {
   font-size: 22px;
   margin: 0;
@@ -115,27 +126,51 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-right: auto;
   max-width: 500px;
+  list-style-type: none;
   }
 
 .navigation-user {
+  display: flex;
   margin: 0;
   padding: 0;
   margin-left: auto;
   width: 270px;
+  list-style-type: none;
 }
 
 
 .navigation-link {
-
+  display: block;
+  padding: 20px 16px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-user-item:first-child {
+  margin-left: auto;
+}
+
+.navigation-user-link {
+  display: block;
+  width: 44px;
+  height: 64px;
+  padding: 22px 12px;
+}
+/*тут прям не знаю как кнопку красивую сделать, если ставлю размер 180 как в макете, то получается 2х строчная кнопка*/
+.navigation-button {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  padding: 8px 50px;
 }
 
 .page-header {
@@ -152,12 +187,20 @@ body {
   display: block;
   margin: 0 auto;
 }
+
 .hero {
   color: #ffffff;
   background-color: #5c84ab;
   background-image: url("../image/index-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  flex-grow: 1;
+  padding-top: 64px;
+  margin-bottom: 25px;
+}
+
+.main-index {
+
 }
 
 .advantages-texts  {
@@ -165,6 +208,7 @@ body {
   text-align: center;
   width: 900px;
   margin: 0 auto;
+  margin-bottom: 21px;
 }
 /*Достопримечательности*/
 .advantages-main-title {
@@ -173,17 +217,23 @@ body {
 }
 
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding: 0;
-
 }
-
+/*как растянуть фото на всеь */
+.advantages-item-revers > .advantages-image {
+  display: flex;
+  order: -1;
+}
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
+  list-style-type: none;
 
 }
 .advantages-content {
-
+  padding: 103px 85px;
   width: 400px;
 }
 
@@ -198,7 +248,11 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
 }
-
+.advantages-photo {
+  display: block;
+  min-width: 100%;
+  max-height: 100%;
+}
 .advantages-title {
   margin: 0 0 30px;
   font-weight: 700;
@@ -210,6 +264,7 @@ body {
 .advantages-attractions .advantages-title {
   color: #ffffff;
 }
+
 
 .advantages-description {
   margin: 0;
@@ -226,6 +281,7 @@ body {
   padding: 0;
   margin: 0 auto;
   display: flex;
+  list-style-type: none;
 }
 
 .services-title {
@@ -235,7 +291,7 @@ body {
 .services-item {
   text-align: center;
   width: 400px;
-  padding: 0 85px;
+  padding: 80px 85px;
 
 }
 .services-subtitle {
@@ -253,8 +309,17 @@ body {
 
 .search {
   margin: 0 auto;
+  padding-bottom: 96px;
   text-align: center;
   width: 630px;
+}
+
+.search-title {
+  margin-bottom: 20px;
+}
+
+.search-description {
+  margin-bottom: 54px;
 }
 
 .search-button {
@@ -275,10 +340,13 @@ body {
   background-image: url("../image/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 1200px;
+  padding: 96px 258px 154px;
 }
 .subscribe-description {
   margin: 0 auto;
   width: 475px;
+  margin-bottom: 54px;
 }
 .subscribe-form {
   display: flex;
@@ -286,6 +354,7 @@ body {
 
 .subscribe-home .subscribe-title {
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .subscribe-input {
@@ -305,20 +374,38 @@ body {
 
 .page-footer {
   display: flex;
-  padding: 0 10px;
+  padding: 40px 70px 30px;
   justify-content: space-between;
-}
+  min-width: 1060px;
+  }
+
+ .page-footer-social {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+
+ }
 /* Texts/Text phone */
+/*Почему то не выравнивается по центру поперечной оси, что то упускаю и флекс пробовал и  блок)*/
 .page-footer-phone {
   color: #000;
   text-align: center;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
+  width: 331px;
+  height: 40px;
+  }
+.page-footer-htmlacademy{
+  width: 115px;
+  height: 33px;
 }
 
-.container-catalog {
-
+.social-link {
+  display: block;
+  width: 47px;
+  height: 40px;
+  padding: 0 10px;
 }
 
 .catalog {
