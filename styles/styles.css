@@ -168,9 +168,11 @@ body {
 /*тут прям не знаю как кнопку красивую сделать, если ставлю размер 180 как в макете, то получается 2х строчная кнопка*/
 .navigation-button {
   display: flex;
-  width: 200px;
+  min-width: 160px;
+  min-height: 36px;
   align-items: center;
   padding: 8px 50px;
+  text-align: center;
 }
 
 .page-header {
@@ -199,21 +201,20 @@ body {
   margin-bottom: 25px;
 }
 
-.main-index {
-
-}
-
 .advantages-texts  {
   padding: 69px 70px;
   text-align: center;
   width: 900px;
   margin: 0 auto;
-  margin-bottom: 21px;
 }
 /*Достопримечательности*/
 .advantages-main-title {
   margin-bottom: 20px;
 
+}
+.advantages-image {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-list {
@@ -222,7 +223,7 @@ body {
   text-align: center;
   padding: 0;
 }
-/*как растянуть фото на всеь */
+
 .advantages-item-revers > .advantages-image {
   display: flex;
   order: -1;
@@ -235,6 +236,7 @@ body {
 .advantages-content {
   padding: 103px 85px;
   width: 400px;
+  min-height: 385px;
 }
 
 .advantages-item:not(.advantages-attractions):nth-child(2n) {
@@ -248,11 +250,7 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
 }
-.advantages-photo {
-  display: block;
-  min-width: 100%;
-  max-height: 100%;
-}
+
 .advantages-title {
   margin: 0 0 30px;
   font-weight: 700;
@@ -261,10 +259,10 @@ body {
   color: #000000; /**/
   text-transform: uppercase;
 }
+
 .advantages-attractions .advantages-title {
   color: #ffffff;
 }
-
 
 .advantages-description {
   margin: 0;
@@ -294,6 +292,7 @@ body {
   padding: 80px 85px;
 
 }
+
 .services-subtitle {
   margin: 0 0 30px;
   font-size: 24px;
@@ -302,10 +301,7 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
-
 }
-
-
 
 .search {
   margin: 0 auto;
@@ -333,7 +329,6 @@ body {
   width: 700px;
 }
 
-
 .subscribe-home {
   color: #ffffff;
   background-color: #5c84ab;
@@ -343,6 +338,7 @@ body {
   width: 1200px;
   padding: 96px 258px 154px;
 }
+
 .subscribe-description {
   margin: 0 auto;
   width: 475px;
@@ -354,6 +350,9 @@ body {
 
 .subscribe-home .subscribe-title {
   color: #ffffff;
+}
+
+.subscribe-title{
   margin-bottom: 20px;
 }
 
@@ -368,12 +367,12 @@ body {
 .subscribe-button {
   font-size: 20px;
   line-height: 36px;
-
   border-radius: 0 4px 4px 0;
 }
 
 .page-footer {
   display: flex;
+  align-items: center;
   padding: 40px 70px 30px;
   justify-content: space-between;
   min-width: 1060px;
@@ -386,7 +385,6 @@ body {
 
  }
 /* Texts/Text phone */
-/*Почему то не выравнивается по центру поперечной оси, что то упускаю и флекс пробовал и  блок)*/
 .page-footer-phone {
   color: #000;
   text-align: center;
@@ -409,7 +407,7 @@ body {
 }
 
 .catalog {
-  padding: 0 70px;
+  padding: 35px 70px;
   color:#FFF;
   background-color: #82B3D3;
   background-image: url("../image/filter-background.jpg");
@@ -425,27 +423,28 @@ body {
 
 .filter-group {
   max-width: 191px;
+  border: none;
 }
 
 .filter-group-checkbox {
   margin-right: 70px;
 }
 
-.filter-group-radio {
-
-}
 .filter-group-range {
   width: 288px;
   margin-left: auto;
   margin-right: 70px;
 }
-.filter-group-buttons {
 
+.results {
+  padding: 50px 70px 60px;
 }
 
 .result-sorting {
   display: flex;
-  padding: 70px;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 40px;
 
 }
 .catalog-header-title {
@@ -453,12 +452,33 @@ body {
   font-size: 60px;
   line-height: 78px;
 }
+.breadcrumbs {
+  display: flex;
+  list-style-type: none;
+}
+
+.breadcrumbs-link-home {
+  width: 12px;
+  height: 12px;
+}
 
 .breadcrumbs-link {
+  display: block;
   font-size: 16px;
   line-height: 21px;
   color:inherit;
   text-decoration: none;
+  width:73px;
+  height: 21px;
+  margin-bottom: 40px;
+}
+
+.filter-list {
+  list-style-type: none;
+
+}
+.control-item {
+  margin-bottom: 16px;
 }
 
 .sorting-select {
@@ -469,7 +489,6 @@ body {
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #333333;
-
   background-color: transparent;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -483,6 +502,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 
 .control-text {
@@ -515,9 +535,16 @@ body {
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  margin-top: 80px;
+  list-style-type: none;
 }
-.pagination-item {
 
+.pagination-item {
+  display: flex;
+  min-width: 60px;
+  height: 60px;
+  margin-right: 8px;
 }
 
 .pagination-link {
@@ -530,6 +557,13 @@ body {
   text-decoration: none;
   border: 1px solid #82b3d3;
   border-radius: 4px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  text-align: center;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-link-current {
