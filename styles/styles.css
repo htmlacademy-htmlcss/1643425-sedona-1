@@ -525,6 +525,9 @@ background-image: url("../image/svg/food.svg");
 /*вот эту часть я не знаю как сделать*/
 .breadcrumbs-link-home {
   display: block;
+  display: block;
+  width: 13px;
+  height: 15px;
 }
 
 .filter-list {
