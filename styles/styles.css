@@ -513,6 +513,7 @@ background-image: url("../image/svg/food.svg");
 .breadcrumbs {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 
 .breadcrumbs-link {
@@ -522,9 +523,9 @@ background-image: url("../image/svg/food.svg");
   color:inherit;
   text-decoration: none;
 }
-/*вот эту часть я не знаю как сделать*/
+
+
 .breadcrumbs-link-home {
-  display: block;
   display: block;
   width: 13px;
   height: 15px;
@@ -536,6 +537,7 @@ background-image: url("../image/svg/food.svg");
 }
 .control-item {
   margin-bottom: 16px;
+  margin-right: 10px;
 }
 
 .sorting-select {
