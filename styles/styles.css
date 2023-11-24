@@ -118,7 +118,8 @@ body {
 /*инпут*/
 .field {
   width: 100%;
-  height: 48px;
+  max-width: 452px;
+  margin-left: auto;
   padding: 10px 20px;
 
   font-weight: 700;
@@ -140,9 +141,9 @@ body {
 
 .navigation {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   align-items: start;
-  margin: 0;
 }
 
 .navigation-list {
@@ -158,6 +159,7 @@ body {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   max-width: 150px;
   margin: 0;
   margin-left: auto;
@@ -197,6 +199,21 @@ body {
   background-image: url("../image/svg/heart.svg");
 }
 
+.navigation-favorites-num {
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 5px;
+
+  font-style: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+
+  background-color: #7db54f;
+  border-radius: 10px;
+}
+
 .navigation-button {
   width: 160px;
   margin-top: 14px;
@@ -218,7 +235,6 @@ body {
 }
 
 .hero {
-  flex-grow: 1;
   padding-top: 64px;
   padding-bottom: 25px;
 
@@ -245,7 +261,6 @@ body {
 
 .advantages-image {
   margin: 0;
-  padding: 0;
 }
 
 .advantages-photo {
@@ -255,6 +270,7 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
 
   list-style-type: none;
@@ -319,7 +335,8 @@ body {
 
 .services-list {
   display: flex;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 0;
 
   list-style-type: none;
@@ -329,11 +346,10 @@ body {
   margin: 20px;
 }
 
-/*тут прям не знаю как выровнять*/
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding: 180px 85px;
+  padding: 180px 85px 80px;
 
   text-align: center;
 
@@ -342,7 +358,7 @@ body {
   background-size: 75px 72px;
 }
 
-.services-item:nth-child(2n) {
+.services-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -415,6 +431,8 @@ body {
 
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .subscribe-home .subscribe-title {
@@ -426,6 +444,8 @@ body {
 }
 
 .subscribe-input {
+  align-items: center;
+
   border-radius: 4px 0 0 4px;
 }
 
@@ -434,6 +454,8 @@ body {
 }
 
 .subscribe-button {
+  margin-right: auto;
+
   font-size: 20px;
   line-height: 36px;
 
@@ -442,6 +464,7 @@ body {
 
 .page-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 40px 70px 30px;
@@ -450,6 +473,7 @@ body {
 .page-footer-social {
   display: flex;
   flex-wrap: wrap;
+  max-width: 200px;
   margin: 0;
   padding: 0;
 
@@ -489,7 +513,6 @@ body {
   background-size: cover;
 }
 
-/*почему то никак не хочет вставать в ряд с разными настройками*/
 .filter-form {
   display: flex;
   flex-wrap: wrap;
@@ -506,9 +529,22 @@ body {
 }
 
 .filter-group-range {
-  width: 288px;
+  width: 100%
   margin-right: 70px;
+  max-width: 288px;
   margin-left: auto;
+}
+
+.filter-title {
+  margin-bottom: 32px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control-text {
+  line-height: 23px;
 }
 
 .results {
@@ -520,11 +556,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
-  padding: 0;
 }
 
 .sorting-view {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 170px;
 }
 
 .view-link {
@@ -616,7 +653,6 @@ body {
 }
 
 .control-item {
-  margin-right: 10px;
   margin-bottom: 16px;
 }
 
@@ -641,19 +677,7 @@ body {
   padding: 0;
 
   gap: 20px;
-  grid-template-columns: 340px 340px 340px;
-}
-
-.filter-title {
-  margin-bottom: 32px;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.control-text {
-  line-height: 23px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .hotel-card {
@@ -661,7 +685,7 @@ body {
   padding: 20px;
 
   gap: 16px 20px;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .hotel-card-link {
