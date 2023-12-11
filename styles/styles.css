@@ -192,6 +192,36 @@ body {
   opacity: 0.6;
 }
 
+.field:focus {
+  background-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.field:disabled {
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.field-valid {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #7db54f;
+}
+
+.field-error {
+  box-shadow: 0 0 0 2px #ff5757;
+}
+
+.page-header {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 70px;
+}
+
 .page-header-logo {
   display: block;
   width: 140px;
@@ -338,15 +368,6 @@ body {
   margin-top: 14px;
 }
 
-.page-header {
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 70px;
-}
-
 .hero-logo {
   display: block;
   margin: 0 auto;
@@ -413,35 +434,9 @@ body {
 }
 
 .advantages-content {
-  position: relative;
-
   width: 400px;
   min-height: 385px;
   padding: 103px 85px;
-}
-
-.advantages-attractions .advantages-content::before {
-  content: "";
-  position: absolute;
-  bottom: 195px;
-  left: 170px;
-
-  width: 60px;
-  height: 2px;
-
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.advantages-item:not(.advantages-attractions) .advantages-content::before {
-  content: "";
-  position: absolute;
-  bottom: 195px;
-  left: 170px;
-
-  width: 60px;
-  height: 2px;
-
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item:not(.advantages-attractions):nth-child(2n) {
@@ -463,7 +458,10 @@ body {
 }
 
 .advantages-title {
-  margin: 0 0 60px;
+  position: relative;
+
+  margin: 0 0 30px;
+  padding-bottom: 30px;
 
   font-weight: 700;
   font-size: 24px;
@@ -473,8 +471,25 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 60px;
+  height: 2px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
+
 .advantages-attractions .advantages-title {
   color: #ffffff;
+}
+
+.advantages-attractions .advantages-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-description {
@@ -607,26 +622,6 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-input::placeholder {
-  font-weight: 400;
-}
-
-.subscribe-input:hover {
-  background-color: rgba(230, 230, 230, 1);
-}
-
-.subscribe-input:focus {
-  background-color: #e6e6e6;
-  border: 2px solid #000000;
-  outline: none;
-}
-
-.subscribe-input:active {
-  background-color: #f2f2f2;
-  border: 2px solid #000000;
-  outline: none;
-}
-
 .subscribe-button {
   width: 232px;
 
@@ -674,7 +669,7 @@ body {
 }
 
 .page-footer-phone:active {
-  color: rgba(117, 97, 87, 0.302);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .page-footer-htmlacademy {
@@ -987,16 +982,15 @@ body {
 }
 
 .hotel-card-link:hover {
-  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .hotel-card-link:focus {
-  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .hotel-card-link:active {
-  transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .hotel-card-price {
