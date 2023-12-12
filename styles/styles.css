@@ -192,6 +192,10 @@ body {
   opacity: 0.6;
 }
 
+.field:hover:not(:disabled) {
+  background-color: #e6e6e6;
+}
+
 .field:focus {
   background-color: #e6e6e6;
   outline: none;
@@ -205,11 +209,15 @@ body {
 }
 
 .field-valid {
+  width: 100%;
+
   background-color: #ffffff;
   box-shadow: 0 0 0 2px #7db54f;
 }
 
 .field-error {
+  width: 100%;
+
   box-shadow: 0 0 0 2px #ff5757;
 }
 
