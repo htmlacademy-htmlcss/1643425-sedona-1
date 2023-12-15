@@ -744,7 +744,10 @@ body {
 }
 
 .filter-group {
+  width: 100%;
   max-width: 191px;
+  margin: 0;
+  padding: 0;
 
   border: none;
 }
@@ -917,10 +920,33 @@ body {
   margin-bottom: 16px;
 }
 
+.control-label {
+  position: relative;
+
+  display: block;
+  padding-left: 36px;
+}
+
 .range-wrapper-inputs {
   position: relative;
 
   display: flex;
+}
+
+.control-mark {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+
+  width: 20px;
+  height: 19px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.control-label:hover .control-mark,
+.control-label:hover .control-text {
+  opacity: 0.6;
 }
 
 .catalog-filter-label {
@@ -941,20 +967,50 @@ body {
   left: 245px;
 }
 
+.range {
+  position: relative;
+
+  min-width: 288px;
+}
+
 .range-input {
   width: 143px;
   height: 48px;
-  margin-bottom: 36px;
-  padding: 12px 20px;
+  margin-bottom: 40px;
+  padding-right: 40px;
 
   background: #f2f2f2;
+  border: none;
+}
+
+.range-input-min {
+  margin-right: 2px;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
   border-radius: 0 4px 4px 0;
 }
 
+/*.range-input:active {
+  background-color: #f2f2f2;
+  outline: none;
+  box-shadow: 0 0 0 2px #000000;
+}
+*/
 .range-scale {
   position: relative;
 
   width: 287px;
+  height: 20px;
+}
+
+.range-scale::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
   height: 4px;
 
   background: #ffffff;
@@ -978,9 +1034,12 @@ body {
 
 .range-toggle {
   position: absolute;
+  z-index: 1;
 
   width: 20px;
   height: 20px;
+
+  border: none;
 }
 
 .range-toggle:focus {

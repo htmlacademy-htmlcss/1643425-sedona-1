@@ -67,19 +67,22 @@
               <ul class="filter-list control-list">
                 <li class="control-item">
                   <label class="control-label" for="pool">
-                    <input class="control-input" id="pool" name="pool" type="checkbox" checked>
+                    <input class="control-input visually-hidden" id="pool" name="pool" type="checkbox" checked>
+                    <span class="control-mark"></span>
                     <span class="control-text">Бассейн</span>
                   </label>
                 </li>
                 <li class="control-item">
                   <label class="control-label" for="parking">
-                    <input class="control-input" id="parking" name="parking" type="checkbox" checked>
+                    <input class="control-input visually-hidden" id="parking" name="parking" type="checkbox" checked>
+                    <span class="control-mark"></span>
                     <span class="control-text">Парковка</span>
                   </label>
                 </li>
                 <li class="control-item">
                   <label class="control-label" for="wi-fi">
-                    <input class="control-input" id="wi-fi" name="wi-fi" type="checkbox">
+                    <input class="control-input visually-hidden" id="wi-fi" name="wi-fi" type="checkbox">
+                    <span class="control-mark"></span>
                     <span class="control-text">Wi-Fi</span>
                   </label>
                 </li>
@@ -91,19 +94,22 @@
               <ul class="filter-list control-list">
                 <li class="control-item">
                   <label class="control-label" for="hotel">
-                    <input class="control-input" id="hotel" name="hotel-group" type="radio" value="hotel" checked>
+                    <input class="control-input visually-hidden" id="hotel" name="hotel-group" type="radio" value="hotel" checked>
+                    <span class="control-mark"></span>
                     <span class="control-text">Гостиница</span>
                   </label>
                 </li>
                 <li class="control-item">
                   <label class="control-label" for="motel">
-                    <input class="control-input" id="motel" name="hotel-group" type="radio" value="motel">
+                    <input class="control-input visually-hidden" id="motel" name="hotel-group" type="radio" value="motel">
+                    <span class="control-mark"></span>
                     <span class="control-text">Мотель</span>
                   </label>
                 </li>
                 <li class="control-item">
                   <label class="control-label" for="apartments">
-                    <input class="control-input" id="apartments" name="hotel-group" type="radio" value="apartments">
+                    <input class="control-input visually-hidden" id="apartments" name="hotel-group" type="radio" value="apartments">
+                    <span class="control-mark"></span>
                     <span class="control-text">Апартаменты</span>
                   </label>
                 </li>
@@ -115,10 +121,10 @@
               <div class="range">
                 <div class="range-wrapper-inputs">
                   <label class="catalog-filter-label catalog-filter-label-min" for="range-min-input">от</label>
-                  <input class="range-input" type="number" value="0" name="min-price" id="range-min-input">
+                  <input class="field range-input range-input-min" type="number" value="0" name="min-price" id="range-min-input">
 
                   <label class="catalog-filter-label catalog-filter-label-max" for="range-max-input">до</label>
-                  <input class="range-input" type="number" value="9000" name="max-price" id="range-max-input">
+                  <input class="field range-input range-input-max" type="number" value="9000" name="max-price" id="range-max-input">
 
                 </div>
                 <div class="range-scale">
