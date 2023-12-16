@@ -949,6 +949,26 @@ body {
   opacity: 0.6;
 }
 
+.control-label:focus .control-mark {
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control-label:active .control-mark,
+.control-label:active .control-text {
+  background-color: #3f5e72;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  background-image: url("../image/svg/tick.svg");
+  background-repeat: no-repeat;
+}
+
 .catalog-filter-label {
   position: absolute;
 
