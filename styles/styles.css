@@ -703,6 +703,45 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-wrapper {
+  position: relative;
+
+  width: 717px;
+  height: 576px;
+  margin: auto;
+  padding: 64px 70px;
+
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 79px;
+  right: 70px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../image/svg/modal-cross.svg");
+  background-repeat: no-repeat;
+  border: none;
+}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -975,44 +1014,20 @@ body {
   opacity: 1; /* или display: block; */
 }
 
-/* .control-mark {
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.control-label:hover .control-mark,
+.control-label:hover,
 .control-label:hover .control-text {
   opacity: 0.6;
 }
 
-.control-label:focus .control-mark {
+.control-label:focus .control-input {
   border-radius: 4px;
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.control-label:active .control-mark,
-.control-label:active .control-text {
-  background-color: #3f5e72;
+.control-label:active .control-text,
+.control-label:active .control-input {
+  opacity: 0.3;
 }
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 6px;
-
-  width: 20px;
-  height: 20px;
-
-  background-image: url("../image/svg/tick.svg");
-  background-repeat: no-repeat;
-} */
 
 .catalog-filter-label {
   position: absolute;
