@@ -182,27 +182,41 @@
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <form class="auth-form" method="post" action="https://echo.htmlacademy.ru/"></form>
-        <div class="arrival-date-container">
-          <label class="arrival-date">Дата заезда:
-            <input type="text" class="auth-form-field field" field placeholder="27 апреля 2020" required>
-            <span class="auth-form-calendar"></span>
-          </label>
-          <p class="auth-form-text">Мы не можем отправить вас в прошлое.</p>
-        </div>
-        <div class="departure-date-container">
-          <label class="departure-date">Дата заезда:
-            <input type="text" class="auth-form-field field" field placeholder="27 апреля 2020" required>
-            <span class="auth-form-calendar"></span>
-          </label>
-          <p class="auth-form-text">На эти даты есть свободные номера. Пока есть.</p>
-        </div>
+        <form class="search-hotel-form" method="post" action="https://echo.htmlacademy.ru/">
+          <div class="date-container arrival">
+            <label class="arrival-date text-form" for="arrivals">Дата заезда:</label>
+            <input type="text" class="search-hotel-field field" id="arrivals" field value="27 апреля 2020" required>
+            <span class="search-hotel-calendar"></span>
+
+            <p class="search-hotel-text text-error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="date-container departure">
+            <label class="departure-date text-form" for="departures">Дата Выезда:</label>
+            <input type="text" id="departures" class="search-hotel-field field" field value="1 сентября 2023" required>
+            <span class="search-hotel-calendar"></span>
+
+            <p class="search-hotel-text">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="count-adults-container">
+            <label class="count-adults text-form" for="adults">Взрослые:</label>
+            <button class="min-count-adults">-</button>
+            <input type="number" class="count-adults-field field" id="adults" value="2" required>
+            <button class="max-count-adults">+</button>
+
+          </div>
+          <div class="count-child-container">
+            <label class="count-child text-form" for="childs">Дети:</label>
+            <button class="min-count-child">-</button>
+            <input type="number" class="count-child-field field" id="childs" value="2" required>
+            <button class="max-count-child">+</button>
+
+          </div>
+          <button class="form-submit button button-light" type="submit">Найти</button>
 
         </form>
 
       </section>
 
-      </section>
     </div>
 
   </div>
