@@ -174,8 +174,8 @@
       </a>
     </footer>
   </div>
-  <div class="modal-container">
-    <div class="modal-wrapper">
+  <div class="modal-container modal-container-close">
+    <div class=" modal-wrapper">
 
       <section class="modal-content">
         <h2 class="modal-title title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
@@ -198,15 +198,24 @@
             <p class="search-hotel-text">На эти даты есть свободные номера. Пока есть.</p>
           </div>
           <div class="count-adults-container">
-            <label class="count-form text-form" for="adults">Взрослые:</label>
+            <label class="count-form-adult text-form" for="adults">Взрослые:</label>
             <button class="min-count-form button-count"></button>
             <input type="number" class="count-field field" id="adults" value="2" required>
             <button class="max-count-form button-count"></button>
 
           </div>
           <div class="count-child-container">
-            <label class="count-form text-form" for="childs">Дети:</label>
-            <button class="min-count-form button-count"></button>
+
+            <span class="count-form text-form count-form-child form-label-icon">
+              <label class="count-form text-form count-form-child" for="childs">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle tooltip-icon" aria-labelledby="tooltip-label-date" id="tooltip-label-date" type="button"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+
+              </span>
+            </span>
+            <button class="min-count-form button-count button-count-min"></button>
             <input type="number" class="count-field field" id="childs" value="2" required>
             <button class="max-count-form button-count"></button>
 
