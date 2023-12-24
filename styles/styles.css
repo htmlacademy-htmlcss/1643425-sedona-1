@@ -704,6 +704,18 @@ body {
 }
 
 .modal-container {
+  position: relative;
+
+  width: 717px;
+  margin: auto;
+  padding: 64px 70px;
+
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -716,20 +728,8 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-wrapper {
-  position: relative;
-
-  width: 717px;
-  height: 576px;
-  margin: auto;
-  padding: 64px 70px;
-
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-}
-
 .modal-title {
+  margin-right: 60px;
   margin-bottom: 64px;
 }
 
@@ -738,30 +738,53 @@ body {
   top: 60px;
   right: 70px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 53px;
   height: 53px;
   padding: 0;
 
-  background-image: url("../image/svg/modal-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
+  border-radius: 50%;
+}
+
+.modal-close-button::after,
+.modal-close-button::before {
+  content: "";
+  position: absolute;
+
+  width: 16px;
+  height: 1px;
+
+  background-color: #000000;
+}
+
+.modal-close-button::after {
+  transform: rotate(45deg);
+}
+
+.modal-close-button::before {
+  transform: rotate(-45deg);
 }
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
-  border-radius: 50%;
 }
 
 .modal-close-button:focus {
   background-color: #e6e6e6;
-  border-radius: 50%;
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .modal-close-button:active {
   background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.modal-close-button:active::after,
+.modal-close-button:active::before {
   box-shadow: none;
   opacity: 0.3;
 }
@@ -1000,9 +1023,9 @@ body {
   padding-right: 16px;
 }
 
-.modal-container-close {
+/* .modal-wrapper-close {
   display: none;
-}
+} */
 
 .social-link {
   display: flex;
@@ -1081,6 +1104,8 @@ body {
 }
 
 .control-text {
+  padding-left: 16px;
+
   line-height: 23px;
 }
 
@@ -1238,7 +1263,6 @@ body {
   width: 20px;
   height: 20px;
   margin: 0;
-  margin-right: 16px;
 
   background-color: rgba(255, 255, 255, 1);
   background-repeat: no-repeat;
@@ -1376,6 +1400,7 @@ body {
   height: 20px;
 
   border: none;
+  border-radius: 5px;
 }
 
 .range-toggle:focus {
