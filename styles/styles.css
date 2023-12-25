@@ -209,15 +209,11 @@ body {
 }
 
 .field-valid {
-  width: 100%;
-
   background-color: #ffffff;
   box-shadow: 0 0 0 2px #7db54f;
 }
 
 .field-error {
-  width: 100%;
-
   box-shadow: 0 0 0 2px #ff5757;
 }
 
@@ -789,22 +785,26 @@ body {
   opacity: 0.3;
 }
 
-.search-hotel-form {
+.modal-form {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
 
-.date-container {
+.form-group {
   position: relative;
 
   display: grid;
+  margin: 0;
+  padding: 0;
 
   column-gap: auto;
 
+  border: none;
+
   grid-column: 1/-1;
-  grid-template-columns: 113px repeat(2, 1fr);
+  grid-template-columns: 150px repeat(2, 1fr);
 }
 
 .text-form {
@@ -816,72 +816,79 @@ body {
   color: #000000;
 }
 
-.arrival-date,
-.departure-date {
+.label-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* Headings/Heading 4 */
+  font-family: PT Sans;
+  color: #000000;
+}
+
+.form-label {
   align-self: center;
 
   grid-column: 1/2;
 }
 
-.search-hotel-field {
+.date-input {
+  background-image: url("../image/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+
   grid-column: 2/-1;
 }
 
-.search-hotel-calendar {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-
-  width: 20px;
-  height: 20px;
-
-  background-image: url("../image/svg/calendar.svg");
-  background-repeat: no-repeat;
-}
-
-.search-hotel-text {
+.form-message {
   margin-top: 0;
   margin-bottom: 23px;
   padding-left: 20px;
 
-  grid-column: 2/-1;
-}
-
-.search-hotel-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+
+  grid-column: 2/-1;
 }
 
-.text-error {
+.form-message-error {
   color: #ff5757;
 }
 
-.count-adults-container {
+.form-group adults {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0;
+  padding: 0;
+
+  border: none;
 
   grid-column: 1/3;
 }
 
-.count-field::-webkit-outer-spin-button,
-.count-field::-webkit-inner-spin-button {
+.adults {
+  grid-column: 1/3;
+}
+
+.people-input::-webkit-outer-spin-button,
+.people-input::-webkit-inner-spin-button {
   margin: 0;
 
   appearance: none;
 }
 
-.count-field {
-  width: 31px;
-  padding: 14px 10px;
+.people-input {
+  width: 111px;
+  padding: 14px 50px;
 }
 
 .button-count {
   border: none;
 }
 
-.count-form-adult {
+.adults-label {
   margin-right: 46px;
 }
 

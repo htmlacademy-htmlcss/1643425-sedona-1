@@ -182,23 +182,21 @@
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <form class="search-hotel-form" method="post" action="https://echo.htmlacademy.ru/">
-          <div class="date-container arrival">
-            <label class="arrival-date text-form" for="arrivals">Дата заезда:</label>
-            <input type="text" class="search-hotel-field field" id="arrivals" field value="27 апреля 2020" required>
-            <span class="search-hotel-calendar"></span>
+        <form class="modal-form form" method="post" action="https://echo.htmlacademy.ru/">
 
-            <p class="search-hotel-text text-error">Мы не можем отправить вас в прошлое.</p>
-          </div>
-          <div class="date-container departure">
-            <label class="departure-date text-form" for="departures">Дата Выезда:</label>
-            <input type="text" id="departures" class="search-hotel-field field" field value="1 сентября 2023" required>
-            <span class="search-hotel-calendar"></span>
+          <fieldset class="form-group date">
+            <label class="form-label data-label label-text" for="arrival-date">Дата Заезда:</label>
+            <input class="date-input field" id="arrival-date" name="arrival-date" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+            <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
+          </fieldset>
 
-            <p class="search-hotel-text">На эти даты есть свободные номера. Пока есть.</p>
-          </div>
-          <div class="count-adults-container">
-            <label class="count-form-adult text-form" for="adults">Взрослые:</label>
+          <fieldset class="form-group date">
+            <label class="form-label data-label label-text" for="departure-date">Дата Выезда:</label>
+            <input class="date-input field" id="departure-date" name="departure-date" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+            <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
+          </fieldset>
+          <!-- <div class="count-adults-container">
+            <label class="count-form-adult text-form label-text" for="adults">Взрослые:</label>
             <button class="min-count-form button-count"></button>
             <input type="number" class="count-field field" id="adults" value="2" required>
             <button class="max-count-form button-count"></button>
@@ -207,7 +205,7 @@
           <div class="count-child-container">
 
             <span class="count-form text-form count-form-child form-label-icon">
-              <label class="count-form text-form count-form-child" for="childs">Дети:</label>
+              <label class="count-form text-form count-form-child label-text" for="childs">Дети:</label>
               <span class="tooltip">
                 <button class="tooltip-toggle tooltip-icon" aria-labelledby="tooltip-label-date" id="tooltip-label-date" type="button"></button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
@@ -219,7 +217,40 @@
             <input type="number" class="count-field field" id="childs" value="2" required>
             <button class="max-count-form button-count"></button>
 
-          </div>
+          </div> -->
+          <fieldset class="form-group adults">
+            <label class="form-label adults-label" for="adults">Взрослые:</label>
+            <div class="people-input-container">
+              <button class="people-button people-button-minus" type="button">
+                <span class="visually-hidden">Уменьшить количество человек.</span>
+              </button>
+              <input class="people-input people-input-adults field" id="adults" name="adults" type="number" value="2" required>
+              <button class="people-button people-button-plus" type="button">
+                <span class="visually-hidden">Увеличить количество человек.</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group children">
+            <div class="tooltip-container">
+              <label class="form-label adults-label" for="children">Дети:</label>
+              <div class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="info-label-children">
+                  <span class="visually-hidden">Дополнительная информация.</span>
+                </button>
+                <p class="tooltip-text" id="info-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </div>
+            <div class="people-input-container">
+              <button class="people-button people-button-minus" type="button">
+                <span class="visually-hidden">Уменьшить количество человек.</span>
+              </button>
+              <input class="people-input people-input-children field" id="children" name="children" type="number" value="2" required>
+              <button class="people-button people-button-plus" type="button">
+                <span class="visually-hidden">Увеличить количество человек.</span>
+              </button>
+            </div>
+          </fieldset>
           <button class="form-submit button button-light" type="submit">Найти</button>
 
         </form>
