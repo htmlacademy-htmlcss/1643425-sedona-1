@@ -859,6 +859,7 @@ body {
 .form-group adults {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -872,6 +873,14 @@ body {
   grid-column: 1/3;
 }
 
+.people-input-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .people-input::-webkit-outer-spin-button,
 .people-input::-webkit-inner-spin-button {
   margin: 0;
@@ -880,7 +889,7 @@ body {
 }
 
 .people-input {
-  width: 111px;
+  width: 121px;
   padding: 14px 50px;
 }
 
@@ -888,50 +897,89 @@ body {
   border: none;
 }
 
-.adults-label {
-  margin-right: 46px;
-}
+.people-button-minus {
+  position: absolute;
+  top: auto;
+  left: 0;
 
-.min-count-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
-  height: 48px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
 
-  background-image: url("../image/svg/button-minus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
+  border: none;
 }
 
-.button-count-min {
-  margin-left: 56px;
-}
-
-.max-count-form {
-  width: 40px;
-  height: 48px;
-
-  background-image: url("../image/svg/button-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
-}
-
-.button-count:hover {
-  opacity: 1;
-}
-
-.button-count:focus {
+.people-button-minus::after {
+  content: "";
   z-index: 1;
 
+  display: block;
+  width: 14px;
+  height: 2px;
+
+  background-color: rgba(117, 97, 87, 0.3);
+  background-position: center;
+}
+
+.people-button-plus {
+  position: absolute;
+  top: auto;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.people-button-plus::after,
+.people-button-plus::before {
+  content: "";
+  position: absolute;
+
+  width: 14px;
+  height: 2px;
+
+  background-color: rgba(117, 97, 87, 0.3);
+  background-position: center;
+}
+
+.people-button-plus::after {
+  transform: rotate(90deg);
+}
+
+.people-button:hover::after,
+.people-button:hover::before {
+  background-color: #000000;
+}
+
+.people-button:focus::after,
+.people-button:focus::before {
+  background-color: #000000;
+}
+
+.people-button:focus {
   border-radius: 4px;
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
-  opacity: 1;
 }
 
-.button-count:active {
+.people-button:active {
   box-shadow: none;
   opacity: 0.2;
+}
+
+.children {
+  grid-column: 3/5;
 }
 
 .count-child-container {
@@ -941,6 +989,10 @@ body {
 
   grid-column: 3/-1;
   justify-self: end;
+}
+
+.tooltip-container {
+  display: flex;
 }
 
 .form-submit {
