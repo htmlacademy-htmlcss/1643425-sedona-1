@@ -789,7 +789,7 @@ body {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  row-gap: 80px;
 }
 
 .form-group {
@@ -816,18 +816,15 @@ body {
   color: #000000;
 }
 
-.label-text {
+.form-label {
+  align-self: center;
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  /* Headings/Heading 4 */
   font-family: PT Sans;
   color: #000000;
-}
-
-.form-label {
-  align-self: center;
 
   grid-column: 1/2;
 }
@@ -858,7 +855,6 @@ body {
 
 .form-group adults {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -993,6 +989,12 @@ body {
 
 .tooltip-container {
   display: flex;
+  align-items: center;
+}
+
+.childs-label {
+  margin-right: 10px;
+  margin-left: 55px;
 }
 
 .form-submit {
@@ -1004,18 +1006,25 @@ body {
 
 .tooltip-toggle {
   display: block;
+  width: 20px;
+  height: 20px;
   margin: 0;
+  margin-right: 46px;
   padding: 0;
 
   background-color: transparent;
+  background-image: url("../image/svg/tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
+  border-radius: 50%;
 }
 
 .count-form-child {
   margin-right: 10px;
 }
 
-.tooltip-icon {
+/* .tooltip-icon {
   display: block;
   width: 20px;
   height: 20px;
@@ -1025,21 +1034,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-}
+} */
 
 .tooltip-icon:hover {
   opacity: 0.5;
 }
 
-.tooltip {
-  position: absolute;
-}
-
 .tooltip-text {
   position: absolute;
-  top: 40px;
+  top: 60px;
 
-  display: block;
   display: none;
   width: 256px;
   padding: 15px 18px 18px 22px;
