@@ -388,7 +388,7 @@ body {
 .hero {
   position: relative;
 
-  padding-top: 64px;
+  padding-top: 51px;
   padding-bottom: 82px;
 
   color: #ffffff;
@@ -413,14 +413,14 @@ body {
 .advantages-texts {
   width: 900px;
   margin: 0 auto;
-  padding: 69px 70px;
+  padding: 69px 70px 90px;
 
   text-align: center;
 }
 
 /*Достопримечательности*/
 .advantages-main-title {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .advantages-image {
@@ -527,13 +527,13 @@ body {
 }
 
 .services-title {
-  margin: 20px;
+  margin: 0 20px 20px;
 }
 
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding: 180px 85px 80px;
+  padding: 180px 85px 67px;
 
   text-align: center;
 
@@ -587,6 +587,8 @@ body {
 }
 
 .search-button {
+  width: 376px;
+
   font-size: 20px;
   line-height: 36px;
 }
@@ -739,8 +741,8 @@ body {
 
 .modal-close-button {
   position: absolute;
-  top: 60px;
-  right: 70px;
+  top: 62px;
+  right: 53px;
 
   display: flex;
   justify-content: center;
@@ -758,8 +760,8 @@ body {
   content: "";
   position: absolute;
 
-  width: 16px;
-  height: 1px;
+  width: 17px;
+  height: 2px;
 
   background-color: #000000;
 }
@@ -797,7 +799,7 @@ body {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 80px;
+  row-gap: 26px;
 }
 
 .form-group {
@@ -841,7 +843,7 @@ body {
 }
 
 .form-message {
-  margin-top: 0;
+  margin-top: 6px;
   padding-left: 20px;
 
   font-size: 16px;
@@ -985,8 +987,7 @@ body {
 }
 
 .childs-label {
-  margin-right: 10px;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 .form-submit {
