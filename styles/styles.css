@@ -469,6 +469,10 @@ body {
   flex-direction: row-reverse;
 }
 
+.advantages-item:not(.advantages-attractions) .advantages-title {
+  padding-top: 10px;
+}
+
 .advantages-title {
   position: relative;
 
@@ -803,13 +807,6 @@ body {
 }
 
 .form-group {
-  /*  position: relative;
-  display: grid;
-  margin: 0;
-  padding: 0;
-  column-gap: auto;
-  border: none;
- */
   display: grid;
   align-items: center;
   margin: 0;
@@ -968,6 +965,8 @@ body {
 }
 
 .children {
+  column-gap: 55px;
+
   grid-column: 3/5;
 }
 
@@ -991,7 +990,8 @@ body {
 }
 
 .form-submit {
-  align-self: end;
+  height: 60px;
+  margin-top: 25px;
 
   font-size: 20px;
   line-height: 24px;
@@ -1062,9 +1062,9 @@ body {
   padding-right: 16px;
 }
 
-/* .modal-wrapper-close {
+.modal-wrapper-close {
   display: none;
-} */
+}
 
 .social-link {
   display: flex;
@@ -1433,13 +1433,14 @@ body {
 
 .range-toggle {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   width: 20px;
   height: 20px;
 
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .range-toggle:focus {
@@ -1450,6 +1451,11 @@ body {
 .range-toggle:active {
   outline: none;
   box-shadow: 0 0 0 2px #83b3d3;
+}
+
+range-toggle:disabled {
+  cursor: none;
+  opacity: 0.5;
 }
 
 .toggle-min {
