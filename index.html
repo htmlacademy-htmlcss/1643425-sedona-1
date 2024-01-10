@@ -85,7 +85,7 @@
           </li>
           <li class="advantages-item advantages-attractions advantages-item-revers">
             <div class="advantages-content">
-              <h3 class="advantages-title">Там есть мост дьявола</h3>
+              <h3 class="advantages-title">Там есть <br>мост дьявола</h3>
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <figure class="advantages-image">
@@ -102,22 +102,22 @@
         <ul class="services-list">
           <li class="services-item services-item-house">
             <h3 class="services-subtitle">Жильё</h3>
-            <p class="services-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <p class="services-description">Рекомендуем пожить <br>в настоящем мотеле, <br> всё как в кино!</p>
           </li>
           <li class="services-item services-item-food">
             <h3 class="services-subtitle">Еда</h3>
-            <p class="services-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <p class="services-description">Всегда заказывайте <br> топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services-item services-item-souvenirs">
             <h3 class="services-subtitle">Сувениры</h3>
-            <p class="services-description">Не только китайского, но и настоящего местного производства!</p>
+            <p class="services-description">Не только китайского, <br> но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
       <section class="search">
         <h2 class="search-title title">Заинтересовались?</h2>
         <p class="search-description text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-button button" href="#">Поиск гостинницы в Седоне</a>
+        <a class="search-button button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe subscribe-home">
         <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
@@ -142,7 +142,7 @@
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link" href="https://t.me/htmlacademy ">
+          <a class="social-link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Telegram</span>
             <svg class="social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="48" height="41" viewBox="0 0 48 41">
               <path d="M31.79 12.96 15.84 19.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.7l2.72-12.8c.28-1.12-.43-1.62-1.15-1.3Z" />
@@ -173,6 +173,70 @@
         </svg>
       </a>
     </footer>
+  </div>
+  <div class="modal-wrapper modal-wrapper-close">
+    <div class="modal-container">
+
+      <section class="modal-content">
+        <h2 class="modal-title title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="modal-form form" method="post" action="https://echo.htmlacademy.ru/">
+
+          <fieldset class="form-group date">
+            <label class="form-label data-label" for="arrival-date">Дата Заезда:</label>
+            <input class="date-input field" id="arrival-date" name="arrival-date" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+            <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
+          </fieldset>
+
+          <fieldset class="form-group date">
+            <label class="form-label data-label" for="departure-date">Дата Выезда:</label>
+            <input class="date-input field" id="departure-date" name="departure-date" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+            <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
+          </fieldset>
+
+          <fieldset class="form-group adults">
+            <label class="form-label adults-label" for="adults">Взрослые:</label>
+            <div class="people-input-container">
+              <button class="people-button people-button-minus" type="button">
+                <span class="visually-hidden">Уменьшить количество человек.</span>
+              </button>
+              <input class="people-input people-input-adults field" id="adults" name="adults" type="number" value="2" required>
+              <button class="people-button people-button-plus" type="button">
+                <span class="visually-hidden">Увеличить количество человек.</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group children">
+            <div class="tooltip-container">
+              <label class="form-label childs-label" for="children">Дети:</label>
+              <div class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="info-label-children">
+                  <span class="visually-hidden">Дополнительная информация.</span>
+                </button>
+                <p class="tooltip-text" id="info-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </div>
+            <div class="people-input-container">
+              <button class="people-button people-button-minus" type="button">
+                <span class="visually-hidden">Уменьшить количество человек.</span>
+              </button>
+              <input class="people-input people-input-children field" id="children" name="children" type="number" value="2" required>
+              <button class="people-button people-button-plus" type="button">
+                <span class="visually-hidden">Увеличить количество человек.</span>
+              </button>
+            </div>
+          </fieldset>
+          <button class="form-submit button button-light" type="submit">Найти</button>
+
+        </form>
+
+      </section>
+
+    </div>
+
   </div>
 </body>
 
