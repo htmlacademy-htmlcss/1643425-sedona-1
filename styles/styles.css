@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -221,7 +228,12 @@ body {
 .field[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 
+  -webkit-appearance: none;
   appearance: none;
+}
+
+.field[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .page-header {
@@ -696,7 +708,7 @@ body {
 
   color: #000000;
 
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .page-footer-htmlacademy:hover {
@@ -899,7 +911,7 @@ body {
   width: 14px;
   height: 2px;
 
-  background-color: currentColor;
+  background-color: currentcolor;
 }
 
 .people-button::after {
@@ -1028,7 +1040,7 @@ body {
 
   color: #83b3d3;
 
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .social-link:hover {
@@ -1271,6 +1283,7 @@ body {
   border: none;
   border-radius: 4px;
 
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -1447,6 +1460,7 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 
+  -webkit-appearance: none;
   appearance: none;
 }
 
